@@ -1,0 +1,6 @@
+#include<stdio.h>
+void main()
+{
+printf("Enter the day");
+printf("Today is monday");
+}
