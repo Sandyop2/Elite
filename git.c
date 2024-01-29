@@ -1,2 +1,2 @@
 void main()
-int main
+int mai
