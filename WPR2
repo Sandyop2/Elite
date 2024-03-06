@@ -1,0 +1,28 @@
+if (taskIndex >= 0 && taskIndex < Tname.length) {
+            System.out.println("Task :" + Tname[taskIndex] + " chosen ");
+
+            attempted[taskIndex] = getUserInput("Enter the number of times attempted for the task " + Tname[taskIndex] + ": ");
+            Tcompletions[taskIndex] = getUserInput("Enter the number of times completedted for the task " + Tname[taskIndex] + ": ");
+            
+            totaltime[taskIndex]=getUserInput("Enter total time required for the task(IN hours) "+Tname[taskIndex]+":");
+            completiontime[taskIndex]=getUserInput("Enter total time consumed for the task "+Tname[taskIndex]+":"); 
+        } 
+        else {
+        System.out.println("Invalid task index. Please choose a valid task index.");
+        j--; 
+        }
+
+        double work=Tcompletions[taskIndex]/attempted[taskIndex];
+        avgwork+=work/NofTasks;
+
+        double time=completiontime[taskIndex]/ totaltime[taskIndex];
+        avgtime+=time/NofTasks;
+    } 
+
+    avgwork*=100;
+    avgtime*=100;
+
+    System.out.println("Final Report");
+    display(NofTasks,Tname,attempted,Tcompletions,totaltime,completiontime);
+    progress(avgwork,avgtime);
+}
